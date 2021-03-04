@@ -221,7 +221,7 @@ nav .hover-menu > li:hover {
 
 /* news */
 .news {
-  background-image: url("/img/wood-texture_00200.jpg");
+  background-image: url("test01/img/wood-texture_00200.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 80px;
@@ -314,7 +314,7 @@ nav .hover-menu > li:hover {
 .news .news-board .news-contents,
 .news .news-board .news-contents-back {
   width: 90%;
-  background-image: url(../img/canvas.png);
+  background-image: url(..test01/img/canvas.png);
   background-size: cover;
   height: 800px;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
@@ -459,7 +459,7 @@ nav .hover-menu > li:hover {
 
 /* links */
 .links {
-  background-image: url("/img/wood-texture_00200.jpg");
+  background-image: url("test01/img/wood-texture_00200.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -569,7 +569,7 @@ footer .footer-right .footer-external-links a {
 
 /* 下層ページのcommon */
 .underlayer-top {
-  background-image: url("/img/wood-texture_00200.jpg");
+  background-image: url("test01/img/wood-texture_00200.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -608,7 +608,7 @@ footer .footer-right .footer-external-links a {
 }
 
 .under-layer-title {
-  background-image: url("/img/under-layer-title.png");
+  background-image: url("test01/img/under-layer-title.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -618,7 +618,7 @@ footer .footer-right .footer-external-links a {
 
 .under-layer-title::before {
   content: "";
-  background: url("/img/under-layer-blur.png"); /*背景画像のURL*/
+  background: url("test01/img/under-layer-blur.png"); /*背景画像のURL*/
   opacity: 0.5; /*半透明カラーの透明度*/
   filter: blur(8px); /*ぼかし度*/
   position: absolute;
