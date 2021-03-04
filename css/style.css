@@ -314,7 +314,7 @@ nav .hover-menu > li:hover {
 .news .news-board .news-contents,
 .news .news-board .news-contents-back {
   width: 90%;
-  background-image: url(..test01/img/canvas.png);
+  background-image: url(../img/canvas.png);
   background-size: cover;
   height: 800px;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
