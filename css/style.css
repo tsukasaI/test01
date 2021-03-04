@@ -1,0 +1,934 @@
+@charset "utf-8";
+/* Reset CSS */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+header,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* common parts and index.html */
+/* 社名非表示 */
+h1 {
+  display: none;
+}
+
+/* PC View */
+/* header */
+header {
+  display: flex;
+  align-items: center;
+}
+
+header .logo-wrapper {
+  margin-top: 10px;
+  margin-left: 30px;
+  width: 220px;
+}
+
+header .logo-wrapper img {
+  width: 100%;
+}
+
+header .pc-top-list,
+header .header-list {
+  display: flex;
+  margin-left: auto;
+  margin-right: 30px;
+  color: #00815d;
+}
+
+header .header-list li {
+  margin: 0 10px;
+}
+
+header .header-list li i {
+  font-size: 1.5rem;
+}
+
+/* nav */
+
+#spnav {
+  display: none;
+}
+
+nav {
+  background-color: #333333;
+}
+
+nav .pc-top-list {
+  display: flex;
+  justify-content: center;
+  padding: 0 3%;
+  position: relative;
+}
+
+nav .pc-top-list li {
+  padding: 10px 20px;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+
+nav .pc-top-list li:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.3s;
+}
+
+nav .top-list > li:nth-child(n + 2):before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 25px;
+  background-color: #999999;
+}
+
+.about {
+  position: relative;
+}
+
+.hover-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 200px;
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+
+.hover-menu.hovered {
+  display: block;
+}
+
+.hover-menu li {
+  border-bottom: solid #000000 1px;
+  color: #000000;
+  transition: 0.5s;
+}
+
+.hover-menu li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+nav .top-list li.hovered {
+  /*ゆっくり変化させたい*/
+  background-color: #ffffff;
+  color: #000000;
+}
+
+nav .hover-menu > li:hover {
+  background-color: #00815d;
+  color: #ffffff;
+}
+
+/* top */
+.top {
+  margin-top: 10px;
+}
+
+.top-upper {
+  display: flex;
+}
+
+.top .top-upper-left {
+  width: 60%;
+}
+
+.top .top-upper-left .carousel ul {
+  padding-left: 0;
+}
+
+.top .top-upper-left img {
+  width: 100%;
+}
+
+.top .top-upper-right {
+  width: 40%;
+}
+
+.top .top-upper-right .top-upper-right-icon {
+  display: flex;
+}
+
+.icon {
+  width: 50%;
+}
+
+.icon img {
+  width: 100%;
+}
+
+.top .top-lower {
+  display: flex;
+}
+
+.sp-top-row {
+  display: none;
+}
+
+/* news */
+.news {
+  background-image: url("/img/wood-texture_00200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 80px;
+}
+
+.news .news-head {
+  display: flex;
+  align-items: flex-end;
+  margin-left: 2%;
+  margin-bottom: 40px;
+}
+
+.news .news-head .news-head-title {
+  height: 150px;
+}
+
+.news .news-head .news-head-chara {
+  height: 70px;
+}
+
+.news h2 {
+  color: #ffffff;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.sp-news-h3 {
+  display: none;
+}
+
+.news .news-board .news-info-and-category {
+  display: flex;
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 90%;
+  margin-top: 10px;
+  position: absolute;
+  top: -40px;
+  z-index: 1;
+}
+
+.news .news-board .news-info-and-category h3 {
+  color: #ffffff;
+  font-weight: normal;
+  margin-right: auto;
+}
+
+.news .news-board .news-info-and-category .category {
+  align-self: flex-end;
+}
+
+.news .news-board .news-info-and-category .category .tag {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.news .news-board .news-info-and-category .category .tag input {
+  display: none;
+}
+
+.news .news-board .news-info-and-category .category .tag label {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.news .news-board .news-info-and-category .category .tag label.tag1 {
+  background-color: #ffdbbd;
+}
+
+.news .news-board .news-info-and-category .category .tag label.tag2 {
+  background-color: #ffd2fc;
+}
+
+.news .news-board .news-info-and-category .category .tag label.tag3 {
+  background-color: #c6f6d2;
+}
+
+.news .news-board .news-info-and-category .category .tag label.tag4 {
+  background-color: #e1dffe;
+}
+
+.news .news-board .news-info-and-category .category .tag label.tag5 {
+  background-color: #fff2b3;
+}
+
+.news .news-board {
+  position: relative;
+}
+
+.news .news-board .news-contents,
+.news .news-board .news-contents-back {
+  width: 90%;
+  background-image: url(../img/canvas.png);
+  background-size: cover;
+  height: 800px;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+.news .news-board .news-contents {
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 30px 0;
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+
+.news .news-board .news-contents.selected {
+  display: block;
+}
+
+.news .news-board .news-contents .news-contents-row {
+  display: flex;
+  justify-content: center;
+  margin: 50px 5%;
+  position: relative;
+  z-index: 2;
+}
+
+.news .news-board .news-contents .news-contents-row .news-card {
+  width: 200px;
+  margin: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.news .news-board .news-contents .news-contents-row .news-card span {
+  color: #00815d;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+.news .news-board .news-contents .button-wrapper {
+  text-align: right;
+  padding-right: 3%;
+  position: relative;
+  z-index: 2;
+}
+
+.news .news-board .news-contents .button-wrapper a {
+  border: solid #00815d thin;
+  color: #00815d;
+  padding: 10px 30px;
+}
+
+.news .news-board .news-contents-back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-3deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-3deg);
+  -ms-transform: translate(-50%, -50%) rotate(-3deg);
+  z-index: 0;
+}
+
+/* calender */
+.calender {
+  margin: 20px 5%;
+}
+
+.calender h2 {
+  color: #745c3d;
+  font-weight: normal;
+}
+
+.calender .calender-head {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.calender .calender-head > :first-child {
+  margin-right: auto;
+}
+
+.calender .calender-head .calender-head-products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.calender .calender-head .calender-head-products img {
+  height: 100px;
+  margin: 10px;
+}
+
+.calender .calender-head .calender-head-chara {
+  height: 130px;
+}
+
+.calender .calender-content .calender-left-top {
+  display: flex;
+  align-items: flex-end;
+}
+
+.calender .calender-content .calender-left-top .calender-left-title {
+  height: 100px;
+}
+
+.calender .calender-content .calender-left-top h2 {
+  margin-bottom: 30px;
+}
+
+.calender .calender-content {
+  display: flex;
+}
+
+.calender .calender-content .calender-left {
+  width: 60%;
+  padding: 0 2%;
+}
+
+.calender .calender-content .calender-left .g-cal,
+.calender .calender-content .calender-right .sns {
+  width: 100%;
+}
+
+.calender .calender-content .calender-right .head {
+  height: 80px;
+}
+
+.calender .calender-content .calender-left .communication {
+  display: flex;
+  justify-content: center;
+}
+
+.calender .calender-content .calender-left .communication img {
+  width: 23%;
+  margin: 1%;
+}
+
+.calender .calender-content .calender-right {
+  width: 40%;
+  padding: 0 2%;
+}
+
+/* links */
+.links {
+  background-image: url("/img/wood-texture_00200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 40px;
+  position: relative;
+  line-height: 20px;
+}
+
+.links .chara {
+  display: block;
+  position: absolute;
+  text-decoration: none;
+  font-weight: bold;
+  right: 5%;
+  top: -15%;
+  color: #40342f;
+  font-size: 12px;
+}
+
+.links .chara img {
+  height: 50px;
+  margin: 0 auto;
+}
+
+.links .links-col {
+  margin: 0 1%;
+  max-width: 170px;
+}
+
+.links .links-col h2 {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.links .links-col a {
+  color: #ffffff;
+  font-size: 10px;
+  display: block;
+}
+
+/* footer */
+footer {
+  display: flex;
+  padding: 20px 5%;
+}
+
+.footer-left {
+  position: relative;
+}
+
+.footer-left .address {
+  margin: 15px 0;
+}
+
+.footer-left .chara {
+  position: absolute;
+  height: 110px;
+  top: 50%;
+  left: 100%;
+  margin: auto auto auto 10px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+footer .footer-right {
+  display: flex;
+  margin-left: auto;
+}
+
+footer .footer-right a {
+  display: flex;
+  margin-left: auto;
+  margin-bottom: 5px;
+}
+
+footer .footer-right .footer-links,
+footer .footer-right .footer-external-links {
+  margin: 0 2%;
+}
+
+footer .footer-right .footer-links a,
+footer .footer-right .footer-external-links a {
+  display: block;
+  font-size: 12px;
+}
+
+footer .footer-right .footer-links a {
+  width: 170px;
+  color: #40342f;
+}
+
+footer .footer-right .footer-external-links a {
+  width: 200px;
+}
+
+.copyright {
+  background-color: #40342f;
+  color: #ffffff;
+  padding: 20px 10%;
+  font-size: 12px;
+  text-align: right;
+}
+
+/* 下層ページのcommon */
+.underlayer-top {
+  background-image: url("/img/wood-texture_00200.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.underlayer-top .location {
+  margin-top: 10px;
+  margin-left: 5%;
+  align-items: center;
+}
+
+.underlayer-top a,
+.underlayer-top span {
+  color: #ffffff;
+  text-align: center;
+  margin: 0 5px;
+  font-weight: lighter;
+}
+
+.underlayer-top-wrapper {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underlayer-top-wrapper img {
+  width: 100px;
+  margin: 0 20px;
+}
+
+.underlayer-top-wrapper h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 0 20px;
+}
+
+.under-layer-title {
+  background-image: url("/img/under-layer-title.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+.under-layer-title::before {
+  content: "";
+  background: url("/img/under-layer-blur.png"); /*背景画像のURL*/
+  opacity: 0.5; /*半透明カラーの透明度*/
+  filter: blur(8px); /*ぼかし度*/
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  z-index: 0;
+}
+
+.under-layer-title h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  position: relative;
+  z-index: 1;
+}
+
+/* bank.html */
+
+/* レスポンシブ */
+@media screen and (max-width: 768px) {
+  header ul .header-text-link {
+    display: none;
+  }
+
+  header .logo-wrapper {
+    margin: 0;
+    max-width: 180px;
+  }
+
+  header .pc-top-list,
+  header .header-list {
+    margin-right: 10px;
+  }
+
+  #pcnav {
+    display: none;
+  }
+  #spnav {
+    display: block;
+  }
+
+  #spnav {
+    padding: 0 10px;
+  }
+
+  /* ハンバーガーメニュー */
+  /* チェックボックスは非表示に */
+  .drawer-hidden {
+    display: none;
+  }
+
+  /* ハンバーガーアイコンの設置スペース */
+  .drawer-open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100; /* 重なり順を一番上に */
+    cursor: pointer;
+  }
+
+  /* ハンバーガーメニューのアイコン */
+  .drawer-open span,
+  .drawer-open span:before,
+  .drawer-open span:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #000000;
+    transition: 0.5s;
+    position: absolute;
+  }
+
+  /* 三本線のうち一番上の棒の位置調整 */
+  .drawer-open span:before {
+    bottom: 8px;
+  }
+
+  /* 三本線のうち一番下の棒の位置調整 */
+  .drawer-open span:after {
+    top: 8px;
+  }
+
+  /* アイコンがクリックされたら真ん中の線を透明にする */
+  #drawer-check:checked ~ .drawer-open span {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+  #drawer-check:checked ~ .drawer-open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+    background: #333333;
+  }
+
+  #drawer-check:checked ~ .drawer-open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+    background: #333333;
+  }
+
+  /* メニューのデザイン*/
+  .drawer-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 100%; /* メニューを画面の外に飛ばす */
+    z-index: 99;
+    background: #fff;
+    transition: 0.5s;
+  }
+
+  .drawer-content .drawer-list {
+    margin: 0;
+    padding: 0;
+  }
+
+  .drawer-content .drawer-list .sp-li-row {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .drawer-content .drawer-list .sp-li-row li {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .drawer-content .drawer-list .sp-li-row li .sp-hover-menu {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .drawer-content .drawer-list .sp-li-row li .sp-hover-menu li a {
+    white-space: nowrap;
+  }
+
+  /* アイコンがクリックされたらメニューを表示 */
+  #drawer-check:checked ~ .drawer-content {
+    left: 0; /* メニューを画面に入れる */
+  }
+
+  /* top */
+  .top {
+    margin: 0;
+  }
+
+  .top-upper {
+    display: block;
+  }
+
+  .top-upper .top-upper-left {
+    width: 100%;
+  }
+
+  .top-upper .top-upper-right {
+    display: none;
+  }
+  .top-lower-wapper {
+    display: none;
+  }
+
+  .sp-top-row {
+    display: flex;
+  }
+
+  .sp-news-h3 {
+    display: block;
+    color: #ffffff;
+    font-weight: normal;
+    margin: -20px 0 50px 5%;
+  }
+
+  .news-info-and-category h3 {
+    display: none;
+  }
+
+  .news .news-board .news-info-and-category {
+    z-index: 2;
+  }
+
+  .news .news-board .news-info-and-category .category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .news .news-board .news-info-and-category .category .tag {
+    font-weight: normal;
+    font-size: 0.9rem;
+    display: block;
+    margin: 10px 0px;
+  }
+
+  .news .news-board .news-info-and-category .category .tag label {
+    white-space: nowrap;
+    padding: 10px 10px 20px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .news .news-board .news-contents {
+    position: relative;
+    z-index: 1;
+    display: none;
+  }
+
+  .news .news-board .news-contents .news-contents-row .news-card {
+    width: 200px;
+    margin: 0 5px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .news .news-board .news-contents .news-contents-row .news-card span {
+    font-size: 0.8rem;
+  }
+
+  .news .news-board .news-contents .news-contents-row .news-card p {
+    font-size: 0.9rem;
+  }
+
+  .news .news-board .news-contents-back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-3deg);
+    -webkit-transform: translate(-50%, -50%) rotate(-3deg);
+    -ms-transform: translate(-50%, -50%) rotate(-3deg);
+    z-index: 0;
+  }
+
+  /* calender */
+  .calender {
+    margin: 20px 0;
+  }
+
+  .calender .calender-head {
+    display: block;
+  }
+
+  .calender .calender-head .calender-head-products img {
+    max-height: 55px;
+  }
+
+  .calender .calender-content {
+    display: block;
+  }
+
+  .calender .calender-content .calender-left,
+  .calender .calender-content .calender-right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .calender .calender-content .calender-left .calender-left-top {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .calender .calender-content .calender-left-top h2 {
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .calender .calender-content .calender-left .calender-left-top img {
+    margin: 0 auto;
+  }
+
+  .calender .calender-content .calender-right img {
+    margin: 0 auto;
+  }
+
+  /* links */
+  .links {
+    padding: 40px 10px;
+    flex-wrap: wrap;
+  }
+
+  .links .chara {
+    top: -8%;
+  }
+
+  .links .links-col {
+    margin: 5px 1%;
+    width: 31%;
+  }
+
+  /* footer */
+  footer {
+    display: block;
+    padding: 20px 2%;
+  }
+
+  .footer-left .chara {
+    height: 80px;
+    left: 65%;
+  }
+
+  footer .footer-right .footer-external-links a {
+    width: 100%;
+  }
+}
