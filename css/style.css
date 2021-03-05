@@ -1044,8 +1044,16 @@ footer .footer-right .footer-external-links a {
   }
 
   /* under-layer */
+  .under-layer-content .under-layer-content-details h4 {
+    padding: 5px 8%;
+  }
+
   .under-layer-description .under-layer-description-link-wrapper {
     justify-content: center;
+  }
+
+  .under-layer-description .under-layer-description-link-wrapper .link-button {
+    margin: 10px 1%;
   }
 
   .under-layer-content-details .under-layer-content-details-top,
@@ -1057,5 +1065,9 @@ footer .footer-right .footer-external-links a {
   .under-layer-content-details .under-layer-content-details-top img {
     width: 100%;
     margin: 30px 0;
+  }
+
+  .under-layer-content-details .under-layer-content-details-products .under-layer-content-details-card p {
+    font-size: 0.9rem;
   }
 }
