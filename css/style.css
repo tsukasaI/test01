@@ -221,7 +221,7 @@ nav .hover-menu > li:hover {
 
 /* news */
 .news {
-  background-image: url("../img/wood-texture_00200.jpg");
+  background-image: url("/test01/img/wood-texture_00200.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 80px;
@@ -459,7 +459,7 @@ nav .hover-menu > li:hover {
 
 /* links */
 .links {
-  background-image: url("../img/wood-texture_00200.jpg");
+  background-image: url("/test01/img/wood-texture_00200.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -567,9 +567,10 @@ footer .footer-right .footer-external-links a {
   text-align: right;
 }
 
-/* 下層ページのcommon */
+/* 下層ページ */
+/* underlayer-top */
 .underlayer-top {
-  background-image: url("../img/wood-texture_00200.jpg");
+  background-image: url("/test01/img/wood-texture_00200.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -607,20 +608,23 @@ footer .footer-right .footer-external-links a {
   margin: 0 20px;
 }
 
+/* under-layer-title */
 .under-layer-title {
-  background-image: url("../img/under-layer-title.png");
+  background-image: url("/test01/img/under-layer-title.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  padding: 20px 0;
+  margin: 0 5%;
   position: relative;
   z-index: -1;
 }
 
 .under-layer-title::before {
   content: "";
-  background: url("../img/under-layer-blur.png"); /*背景画像のURL*/
-  opacity: 0.5; /*半透明カラーの透明度*/
-  filter: blur(8px); /*ぼかし度*/
+  background: url("/test01/img/under-layer-blur.png");
+  opacity: 0.5;
+  filter: blur(5px);
   position: absolute;
   top: -8px;
   left: -8px;
@@ -637,7 +641,105 @@ footer .footer-right .footer-external-links a {
   z-index: 1;
 }
 
-/* bank.html */
+/* under-layer-description */
+.under-layer-description {
+  margin: 0 5%;
+}
+
+.under-layer-description p {
+  margin: 20px 5%;
+}
+
+.under-layer-description .under-layer-description-link-wrapper {
+  color: #00815d;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 5%;
+}
+
+.under-layer-description .under-layer-description-link-wrapper .link-button {
+  border: solid #00815d thin;
+  margin: 20px 3%;
+  width: 170px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.under-layer-description
+  .under-layer-description-link-wrapper
+  .link-button
+  span::after {
+  content: "\00a0\00a0\03e";
+}
+
+.under-layer-description .under-layer-description-link-wrapper .link-button a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* under-layer-content */
+.under-layer-content h3 {
+  margin: 40px 3%;
+  border-left: #82bc9d solid 5px;
+  border-bottom: #82bc9d solid 2px;
+  color: #00815d;
+  padding: 10px;
+}
+
+.under-layer-content .under-layer-content-description {
+  margin: 40px 5%;
+}
+
+.under-layer-content .under-layer-content-details {
+  margin: 40px 5%;
+}
+
+.under-layer-content .under-layer-content-details h4 {
+  background-color: #00815d;
+  color: #ffffff;
+  padding: 5px 2%;
+  font-weight: normal;
+  border-radius: 20px;
+  font-size: 1.1rem;
+}
+
+.under-layer-content-details .under-layer-content-details-top,
+.under-layer-content-details .under-layer-content-details-description,
+.under-layer-content-details .under-layer-content-details-products {
+  display: flex;
+  margin: 20px 2%;
+}
+
+.under-layer-content-details .under-layer-content-details-top p,
+.under-layer-content-details .under-layer-content-details-top img {
+  margin: 0 1%;
+}
+
+.under-layer-content-details .under-layer-content-details-products {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.under-layer-content-details
+  .under-layer-content-details-products
+  .under-layer-content-details-card {
+  width: 30%;
+  margin: 20px 0.6%;
+}
+
+.under-layer-content-details
+  .under-layer-content-details-products
+  .under-layer-content-details-card
+  .under-layer-content-details-card-img-wrapper {
+  background-color: #ededed;
+  padding: 0 15px;
+}
 
 /* レスポンシブ */
 @media screen and (max-width: 768px) {
