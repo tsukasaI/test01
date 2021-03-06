@@ -164,7 +164,6 @@ nav .top-list > li:nth-child(n + 2):before {
 }
 
 nav .top-list li.hovered {
-  /*ゆっくり変化させたい*/
   background-color: #ffffff;
   color: #000000;
 }
@@ -624,6 +623,7 @@ footer .footer-right .footer-external-links a {
   content: "";
   background: url("/test01/img/under-layer-blur.png");
   opacity: 0.5;
+  -webkit-filter: blur(5px);
   filter: blur(5px);
   position: absolute;
   top: -8px;
@@ -740,6 +740,18 @@ footer .footer-right .footer-external-links a {
   .under-layer-content-details-card {
   width: 30%;
   margin: 20px 0.6%;
+  position: relative;
+}
+
+.under-layer-content-details
+  .under-layer-content-details-products
+  .under-layer-content-details-card
+  a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .under-layer-content-details
@@ -758,23 +770,29 @@ footer .footer-right .footer-external-links a {
 
   header .logo-wrapper {
     margin: 0;
-    max-width: 180px;
+    max-width: 200px;
   }
 
   header .pc-top-list,
   header .header-list {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   #pcnav {
     display: none;
   }
-  #spnav {
-    display: block;
+
+  header .header-list li {
+    margin: 0 5px;
+  }
+
+  header .header-list li i {
+    font-size: 1.2rem;
   }
 
   #spnav {
-    padding: 0 10px;
+    display: block;
+    padding: 0 5px;
   }
 
   /* ハンバーガーメニュー */
@@ -827,12 +845,14 @@ footer .footer-right .footer-external-links a {
   /* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
   #drawer-check:checked ~ .drawer-open span::before {
     bottom: 0;
+    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     background: #333333;
   }
 
   #drawer-check:checked ~ .drawer-open span::after {
     top: 0;
+    -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     background: #333333;
   }
@@ -1044,6 +1064,21 @@ footer .footer-right .footer-external-links a {
   }
 
   /* under-layer */
+  /* top */
+  .underlayer-top a,
+  .underlayer-top span {
+    font-size: 0.9rem;
+  }
+
+  .underlayer-top-wrapper img {
+    width: 70px;
+  }
+
+  /* title */
+  .under-layer-title {
+    margin: 0;
+  }
+
   .under-layer-content .under-layer-content-details h4 {
     padding: 5px 8%;
   }
@@ -1067,7 +1102,17 @@ footer .footer-right .footer-external-links a {
     margin: 30px 0;
   }
 
-  .under-layer-content-details .under-layer-content-details-products .under-layer-content-details-card p {
+  .under-layer-content-details
+    .under-layer-content-details-products
+    .under-layer-content-details-card {
+    width: 45%;
+    margin: 20px 2%;
+  }
+
+  .under-layer-content-details
+    .under-layer-content-details-products
+    .under-layer-content-details-card
+    p {
     font-size: 0.9rem;
   }
 }
