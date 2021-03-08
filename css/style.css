@@ -42,8 +42,12 @@ body {
 }
 
 /* A elements that don't have a class get default styles */
-a:not([class]) {
+a {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* Make images easier to work with */
@@ -64,11 +68,13 @@ h1 {
 header {
   display: flex;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 header .logo-wrapper {
-  margin-top: 10px;
-  margin-left: 30px;
+  margin-top: 18px;
+  margin-left: 85px;
   width: 220px;
 }
 
@@ -80,12 +86,16 @@ header .pc-top-list,
 header .header-list {
   display: flex;
   margin-left: auto;
-  margin-right: 30px;
-  color: #00815d;
+  margin-right: 110px;
 }
 
 header .header-list li {
   margin: 0 10px;
+  color: #00815d;
+}
+
+header .header-list li a {
+  color: #00815d;
 }
 
 header .header-list li i {
@@ -104,9 +114,9 @@ nav {
 
 nav .pc-top-list {
   display: flex;
-  justify-content: center;
-  padding: 0 3%;
   position: relative;
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 nav .pc-top-list li {
@@ -116,18 +126,37 @@ nav .pc-top-list li {
   cursor: pointer;
 }
 
+nav .pc-top-list li .hover-content {
+  display: none;
+}
+
 nav .pc-top-list li:hover {
   background-color: #ffffff;
   color: #000000;
   transition: 0.3s;
+  border-bottom: 1px solid 00815d;
 }
 
-nav .top-list > li:nth-child(n + 2):before {
+nav .pc-top-list li:hover .content {
+  display: none;
+}
+
+nav .pc-top-list li:hover .hover-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .pc-top-list li:hover .hover-content .logo {
+  width: 30px;
+}
+
+nav .pc-top-list > li:nth-child(n + 2):before {
   content: "";
   position: absolute;
   left: 0;
   width: 1px;
-  height: 25px;
+  height: 60%;
   background-color: #999999;
 }
 
@@ -142,17 +171,18 @@ nav .top-list > li:nth-child(n + 2):before {
   left: 0%;
   width: 200px;
   background-color: #ffffff;
-  transition: 0.5s;
+  padding: 0;
 }
 
 .hover-menu.hovered {
   display: block;
+  transition: 0.3s;
 }
 
-.hover-menu li {
+nav .pc-top-list li .hover-menu li {
   border-bottom: solid #000000 1px;
   color: #000000;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .hover-menu li a {
@@ -163,19 +193,20 @@ nav .top-list > li:nth-child(n + 2):before {
   width: 100%;
 }
 
-nav .top-list li.hovered {
+nav .pc-top-list li.hovered {
   background-color: #ffffff;
-  color: #000000;
+  color: 00815d;
 }
 
-nav .hover-menu > li:hover {
+nav .pc-top-list .hover-menu > li:hover {
   background-color: #00815d;
   color: #ffffff;
 }
 
 /* top */
 .top {
-  margin-top: 10px;
+  margin: 10px auto;
+  max-width: 1140px;
 }
 
 .top-upper {
@@ -208,6 +239,7 @@ nav .hover-menu > li:hover {
 
 .icon img {
   width: 100%;
+  padding: 10px;
 }
 
 .top .top-lower {
@@ -223,7 +255,13 @@ nav .hover-menu > li:hover {
   background-image: url("/test01/img/wood-texture_00200.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+.news .news-wrapper {
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 .news .news-head {
@@ -231,6 +269,7 @@ nav .hover-menu > li:hover {
   align-items: flex-end;
   margin-left: 2%;
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .news .news-head .news-head-title {
@@ -247,10 +286,6 @@ nav .hover-menu > li:hover {
   margin-right: 5%;
 }
 
-.sp-news-h3 {
-  display: none;
-}
-
 .news .news-board .news-info-and-category {
   display: flex;
   margin-right: 5%;
@@ -262,10 +297,9 @@ nav .hover-menu > li:hover {
   z-index: 1;
 }
 
-.news .news-board .news-info-and-category h3 {
-  color: #ffffff;
-  font-weight: normal;
-  margin-right: auto;
+.news .news-title-jp {
+  height: 30px;
+  margin-left: 5%;
 }
 
 .news .news-board .news-info-and-category .category {
@@ -341,7 +375,7 @@ nav .hover-menu > li:hover {
 }
 
 .news .news-board .news-contents .news-contents-row .news-card {
-  width: 200px;
+  width: 30%;
   margin: 0 20px;
   position: relative;
   z-index: 2;
@@ -378,7 +412,8 @@ nav .hover-menu > li:hover {
 
 /* calender */
 .calender {
-  margin: 20px 5%;
+  margin: 80px auto;
+  max-width: 1140px;
 }
 
 .calender h2 {
@@ -413,14 +448,21 @@ nav .hover-menu > li:hover {
 .calender .calender-content .calender-left-top {
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
+}
+
+.calender .calender-content .calender-left-top .calender-left-title-jp {
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+.calender .calender-content .calender-left-top .calender-left-title-jp-com {
+  width: 76px;
+  margin: auto 25px;
 }
 
 .calender .calender-content .calender-left-top .calender-left-title {
   height: 100px;
-}
-
-.calender .calender-content .calender-left-top h2 {
-  margin-bottom: 30px;
 }
 
 .calender .calender-content {
@@ -434,6 +476,7 @@ nav .hover-menu > li:hover {
 
 .calender .calender-content .calender-left .g-cal,
 .calender .calender-content .calender-right .sns {
+  display: block;
   width: 100%;
 }
 
@@ -446,7 +489,8 @@ nav .hover-menu > li:hover {
   justify-content: center;
 }
 
-.calender .calender-content .calender-left .communication img {
+.calender .calender-content .calender-left .communication a {
+  display: block;
   width: 23%;
   margin: 1%;
 }
@@ -456,75 +500,93 @@ nav .hover-menu > li:hover {
   padding: 0 2%;
 }
 
+.calender .calender-content .calender-right .youtube-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.calender .calender-content .calender-right .youtube-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* links */
 .links {
   background-image: url("/test01/img/wood-texture_00200.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.links .links-wrapper {
+  margin-left: 85px;
+  max-width: 1140px;
   display: flex;
-  justify-content: center;
-  margin-top: 40px;
+  padding-left: 85px;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-right: 40px;
-  position: relative;
-  line-height: 20px;
-}
-
-.links .chara {
-  display: block;
-  position: absolute;
-  text-decoration: none;
-  font-weight: bold;
-  right: 5%;
-  top: -15%;
-  color: #40342f;
-  font-size: 12px;
-}
-
-.links .chara img {
-  height: 50px;
-  margin: 0 auto;
 }
 
 .links .links-col {
-  margin: 0 1%;
+  margin-right: 25px;
   max-width: 170px;
+  position: relative;
 }
 
 .links .links-col h2 {
   color: #ffffff;
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
 .links .links-col a {
   color: #ffffff;
-  font-size: 10px;
   display: block;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.links .links-col .chara {
+  display: block;
+  position: absolute;
+  font-weight: bold;
+  right: -30%;
+  top: -30%;
+  color: #40342f;
+  font-size: 12px;
+}
+
+.links .links-col .chara img {
+  height: 70px;
+  margin: 0 auto;
 }
 
 /* footer */
 footer {
   display: flex;
-  padding: 20px 5%;
-}
-
-.footer-left {
-  position: relative;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 1140px;
 }
 
 .footer-left .address {
-  margin: 15px 0;
+  margin-top: 20px;
+  font-size: 14px;
+  position: relative;
 }
 
-.footer-left .chara {
+.footer-left .address .chara {
   position: absolute;
-  height: 110px;
-  top: 50%;
-  left: 100%;
-  margin: auto auto auto 10px;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  width: 110px;
+  bottom: 0;
+  left: 120%;
 }
 
 footer .footer-right {
@@ -535,7 +597,6 @@ footer .footer-right {
 footer .footer-right a {
   display: flex;
   margin-left: auto;
-  margin-bottom: 5px;
 }
 
 footer .footer-right .footer-links,
@@ -546,23 +607,27 @@ footer .footer-right .footer-external-links {
 footer .footer-right .footer-links a,
 footer .footer-right .footer-external-links a {
   display: block;
-  font-size: 12px;
 }
 
 footer .footer-right .footer-links a {
-  width: 170px;
-  color: #40342f;
+  color: #898989;
+  font-size: 14px;
+  line-height: 25px;
+  white-space: nowrap;
 }
 
 footer .footer-right .footer-external-links a {
   width: 200px;
+  color: #333333;
+  font-size: 14px;
+  line-height: 25px;
 }
 
 .copyright {
   background-color: #40342f;
   color: #ffffff;
   padding: 20px 10%;
-  font-size: 12px;
+  font-size: 14px;
   text-align: right;
 }
 
@@ -573,38 +638,44 @@ footer .footer-right .footer-external-links a {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  height: 160px;
+}
+
+.underlayer-top .underlayer-top-wrapper {
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 .underlayer-top .location {
-  margin-top: 10px;
-  margin-left: 5%;
+  margin-left: 55px;
+  margin-top: 20px;
   align-items: center;
 }
 
-.underlayer-top a,
-.underlayer-top span {
+.underlayer-top .underlayer-top-title {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underlayer-top .underlayer-top-wrapper a,
+.underlayer-top .underlayer-top-wrapper span {
+  font-variant-east-asian: 16px;
   color: #ffffff;
   text-align: center;
   margin: 0 5px;
   font-weight: lighter;
 }
 
-.underlayer-top-wrapper {
-  margin: 60px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.underlayer-top-title img {
+  height: 50px;
 }
 
-.underlayer-top-wrapper img {
-  width: 100px;
-  margin: 0 20px;
-}
-
-.underlayer-top-wrapper h2 {
+.underlayer-top-title h2 {
   color: #ffffff;
-  font-size: 2rem;
-  margin: 0 20px;
+  font-size: 40px;
+  margin-left: 50px;
 }
 
 /* under-layer-title */
@@ -613,18 +684,19 @@ footer .footer-right .footer-external-links a {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  padding: 20px 0;
-  margin: 0 5%;
   position: relative;
+  height: 185px;
   z-index: -1;
+  margin: 0 auto;
+  max-width: 1140px;
+  display: flex;
+  align-items: center;
 }
 
 .under-layer-title::before {
   content: "";
   background: url("/test01/img/under-layer-blur.png");
-  opacity: 0.5;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+  opacity: 0.7;
   position: absolute;
   top: -8px;
   left: -8px;
@@ -634,9 +706,8 @@ footer .footer-right .footer-external-links a {
 }
 
 .under-layer-title h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 5%;
+  font-size: 36px;
+  margin: auto 70px;
   position: relative;
   z-index: 1;
 }
@@ -654,14 +725,19 @@ footer .footer-right .footer-external-links a {
   color: #00815d;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 5%;
+  margin: 0 auto;
+}
+
+.under-layer-description.under-layer-description-link-wrapper {
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 .under-layer-description .under-layer-description-link-wrapper .link-button {
   border: solid #00815d thin;
-  margin: 20px 3%;
-  width: 170px;
-  height: 50px;
+  margin: 20px 25px;
+  width: 210px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -684,16 +760,24 @@ footer .footer-right .footer-external-links a {
 }
 
 /* under-layer-content */
+
 .under-layer-content h3 {
-  margin: 40px 3%;
-  border-left: #82bc9d solid 5px;
+  margin: 80px 3%;
+  border-left: #82bc9d solid 10px;
   border-bottom: #82bc9d solid 2px;
   color: #00815d;
-  padding: 10px;
+  font-size: 30px;
+  font-weight: normal;
+  padding: 15px;
+}
+
+.under-layer-content .wrapper {
+  margin: 0 auto;
+  max-width: 1140px;
 }
 
 .under-layer-content .under-layer-content-description {
-  margin: 40px 5%;
+  line-height: 28px;
 }
 
 .under-layer-content .under-layer-content-details {
@@ -701,20 +785,20 @@ footer .footer-right .footer-external-links a {
 }
 
 .under-layer-content .under-layer-content-details h4 {
-  margin: 60px 0 30px;
   background-color: #00815d;
   color: #ffffff;
   padding: 5px 2%;
   font-weight: normal;
   border-radius: 20px;
-  font-size: 1.1rem;
+  font-size: 21px;
+  margin-top: 50px;
 }
 
 .under-layer-content-details .under-layer-content-details-top,
 .under-layer-content-details .under-layer-content-details-description,
 .under-layer-content-details .under-layer-content-details-products {
   display: flex;
-  margin: 20px 2%;
+  margin: 20px 0;
 }
 
 .under-layer-content-details .under-layer-content-details-top p,
@@ -724,6 +808,7 @@ footer .footer-right .footer-external-links a {
 
 .under-layer-content-details .under-layer-content-details-top p {
   width: 38%;
+  line-height: 28px;
 }
 
 .under-layer-content-details .under-layer-content-details-top img {
@@ -738,8 +823,8 @@ footer .footer-right .footer-external-links a {
 .under-layer-content-details
   .under-layer-content-details-products
   .under-layer-content-details-card {
-  width: 30%;
-  margin: 20px 0.6%;
+  width: 270px;
+  margin: 10px 30px;
   position: relative;
 }
 
@@ -760,6 +845,24 @@ footer .footer-right .footer-external-links a {
   .under-layer-content-details-card-img-wrapper {
   background-color: #ededed;
   padding: 0 15px;
+}
+
+.under-layer-content-details
+  .under-layer-content-details-products
+  .under-layer-content-details-card
+  h5 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 15px 0;
+}
+
+.under-layer-content-details
+  .under-layer-content-details-products
+  .under-layer-content-details-card
+  p {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
 }
 
 /* レスポンシブ */
@@ -823,7 +926,7 @@ footer .footer-right .footer-external-links a {
     width: 25px;
     border-radius: 3px;
     background: #000000;
-    transition: 0.5s;
+    transition: 0.3s;
     position: absolute;
   }
 
@@ -867,7 +970,7 @@ footer .footer-right .footer-external-links a {
     left: 100%; /* メニューを画面の外に飛ばす */
     z-index: 99;
     background: #fff;
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   .drawer-content .drawer-list {
@@ -924,17 +1027,6 @@ footer .footer-right .footer-external-links a {
 
   .sp-top-row {
     display: flex;
-  }
-
-  .sp-news-h3 {
-    display: block;
-    color: #ffffff;
-    font-weight: normal;
-    margin: -20px 0 50px 5%;
-  }
-
-  .news-info-and-category h3 {
-    display: none;
   }
 
   .news .news-board .news-info-and-category {
@@ -1016,21 +1108,11 @@ footer .footer-right .footer-external-links a {
   }
 
   .calender .calender-content .calender-left .calender-left-top {
-    display: block;
     margin-top: 20px;
   }
 
-  .calender .calender-content .calender-left-top h2 {
-    text-align: center;
-    margin-bottom: 0;
-  }
-
-  .calender .calender-content .calender-left .calender-left-top img {
-    margin: 0 auto;
-  }
-
   .calender .calender-content .calender-right img {
-    margin: 0 auto;
+    margin: 20px auto;
   }
 
   /* links */
