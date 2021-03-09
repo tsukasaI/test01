@@ -44,6 +44,7 @@ body {
 /* A elements that don't have a class get default styles */
 a {
   text-decoration: none;
+  color: #00815d;
 }
 
 a:hover {
@@ -120,10 +121,12 @@ nav .pc-top-list {
 }
 
 nav .pc-top-list li {
-  padding: 10px 20px;
+  padding: 10px 0;
+  width: 160px;
   color: #ffffff;
   position: relative;
   cursor: pointer;
+  text-align: center;
 }
 
 nav .pc-top-list li .hover-content {
@@ -172,6 +175,9 @@ nav .pc-top-list > li:nth-child(n + 2):before {
   width: 200px;
   background-color: #ffffff;
   padding: 0;
+  font-size: 14px;
+  color: #00815d;
+  transition: 0.3s;
 }
 
 .hover-menu.hovered {
@@ -181,7 +187,7 @@ nav .pc-top-list > li:nth-child(n + 2):before {
 
 nav .pc-top-list li .hover-menu li {
   border-bottom: solid #000000 1px;
-  color: #000000;
+  color: #00815d;
   transition: 0.3s;
 }
 
@@ -215,6 +221,24 @@ nav .pc-top-list .hover-menu > li:hover {
 
 .top .top-upper-left {
   width: 60%;
+  position: relative;
+}
+
+.top .top-upper-left .top-left-message {
+  position: absolute;
+  color: #ffffff;
+  width: 100%;
+  z-index: 2;
+  top: 45px;
+}
+
+.top .top-upper-left .top-left-message h2 {
+  font-weight: lighter;
+  font-size: 32px;
+  text-align: center;
+  letter-spacing: 0.38em;
+  text-shadow: 2px 2px 10px #31a8f1, -2px 2px 10px #31a8f1,
+    2px -2px 10px #31a8f1, -2px -2px 10px #31a8f1;
 }
 
 .top .top-upper-left .carousel ul {
@@ -288,6 +312,7 @@ nav .pc-top-list .hover-menu > li:hover {
 
 .news .news-board .news-info-and-category {
   display: flex;
+  justify-content: flex-end;
   margin-right: 5%;
   margin-left: 5%;
   width: 90%;
@@ -304,11 +329,13 @@ nav .pc-top-list .hover-menu > li:hover {
 
 .news .news-board .news-info-and-category .category {
   align-self: flex-end;
+  position: relative;
 }
 
 .news .news-board .news-info-and-category .category .tag {
   display: inline-block;
   font-weight: bold;
+  top: -50px;
 }
 
 .news .news-board .news-info-and-category .category .tag input {
@@ -342,6 +369,7 @@ nav .pc-top-list .hover-menu > li:hover {
 
 .news .news-board {
   position: relative;
+  margin-top: 10px;
 }
 
 .news .news-board .news-contents,
@@ -524,13 +552,20 @@ nav .pc-top-list .hover-menu > li:hover {
   position: relative;
 }
 
+.links .sp-chara {
+  display: none;
+}
+
 .links .links-wrapper {
-  margin-left: 85px;
   max-width: 1140px;
+  margin: 0 auto;
   display: flex;
-  padding-left: 85px;
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+.links .col-wrapper {
+  display: flex;
 }
 
 .links .links-col {
@@ -557,7 +592,7 @@ nav .pc-top-list .hover-menu > li:hover {
   display: block;
   position: absolute;
   font-weight: bold;
-  right: -30%;
+  right: -10%;
   top: -30%;
   color: #40342f;
   font-size: 12px;
@@ -872,8 +907,9 @@ footer .footer-right .footer-external-links a {
   }
 
   header .logo-wrapper {
-    margin: 0;
-    max-width: 200px;
+    margin-top: 0;
+    margin-left: 20px;
+    width: 300px;
   }
 
   header .pc-top-list,
@@ -907,8 +943,8 @@ footer .footer-right .footer-external-links a {
   /* ハンバーガーアイコンの設置スペース */
   .drawer-open {
     display: flex;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -988,6 +1024,11 @@ footer .footer-right .footer-external-links a {
     width: 50%;
     text-align: center;
     margin: 0 auto;
+    line-height: 28px;
+  }
+
+  .drawer-content .drawer-list .sp-li-row li .hover-content {
+    display: none;
   }
 
   .drawer-content .drawer-list .sp-li-row li .sp-hover-menu {
@@ -1027,6 +1068,14 @@ footer .footer-right .footer-external-links a {
 
   .sp-top-row {
     display: flex;
+  }
+
+  .calender .calender-head .calender-head-chara {
+    height: 100px;
+  }
+
+  .news .news-title-jp {
+    margin-bottom: 30px;
   }
 
   .news .news-board .news-info-and-category {
@@ -1109,25 +1158,72 @@ footer .footer-right .footer-external-links a {
 
   .calender .calender-content .calender-left .calender-left-top {
     margin-top: 20px;
+    justify-content: center;
   }
 
-  .calender .calender-content .calender-right img {
-    margin: 20px auto;
+  .calender .calender-content .calender-left .calender-left-top img {
+    width: 50%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .calender
+    .calender-content
+    .calender-left
+    .calender-left-top
+    img.calender-left-title-jp-com {
+    width: 35%;
+  }
+
+  .calender .calender-content .calender-right img.head {
+    margin: 40px auto 0;
+  }
+
+  .calender .calender-content .calender-right img.instagram-img {
+    margin: 0;
   }
 
   /* links */
   .links {
     padding: 40px 10px;
     flex-wrap: wrap;
+    margin-top: 80px;
   }
 
-  .links .chara {
-    top: -8%;
+  .links .sp-chara {
+    display: block;
+    position: absolute;
+    font-weight: bold;
+    top: -5%;
+    right: 0;
+    color: #40342f;
+    font-size: 12px;
+  }
+
+  .links .sp-chara img {
+    height: 70px;
+    margin: 0 auto;
+  }
+
+  .links .links-wrapper {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .links .col-wrapper {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .links .links-wrapper .chara {
+    display: none;
   }
 
   .links .links-col {
-    margin: 5px 1%;
-    width: 31%;
+    margin: 5px 10px;
+    width: 48%;
   }
 
   /* footer */
@@ -1136,13 +1232,22 @@ footer .footer-right .footer-external-links a {
     padding: 20px 2%;
   }
 
-  .footer-left .chara {
-    height: 80px;
-    left: 65%;
+  .footer-left .address .chara {
+    width: 100px;
+    left: auto;
+    right: 0%;
+  }
+
+  footer .footer-right {
+    margin-top: 40px 0;
   }
 
   footer .footer-right .footer-external-links a {
     width: 100%;
+  }
+
+  .copyright {
+    text-align: center;
   }
 
   /* under-layer */
