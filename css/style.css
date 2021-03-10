@@ -1201,7 +1201,7 @@ footer .footer-right .footer-external-links a {
     float: none;
     width: 100%;
     margin-bottom: 20px;
-    background: #ccc;
+    height: 240px;
   }
 
   .fb-page {
