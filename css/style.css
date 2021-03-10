@@ -533,6 +533,10 @@ nav .pc-top-list .hover-menu > li:hover {
   padding: 0 2%;
 }
 
+.fb-container * {
+  width: 100%;
+}
+
 .calender .calender-content .calender-right .youtube-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -1060,7 +1064,7 @@ footer .footer-right .footer-external-links a {
     display: block;
   }
 
-  .top .top-upper-left .top-left-message h2{
+  .top .top-upper-left .top-left-message h2 {
     font-size: 1rem;
   }
 
@@ -1193,6 +1197,22 @@ footer .footer-right .footer-external-links a {
     margin: 40px auto 0;
   }
 
+  .fb-container {
+    float: none;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #ccc;
+  }
+
+  .fb-page {
+    display: block !important;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 450px;
+  }
+
   .calender .calender-content .calender-right img.instagram-img {
     margin: 0;
   }
@@ -1226,7 +1246,7 @@ footer .footer-right .footer-external-links a {
   }
 
   .links .col-wrapper {
-    margin: 0 auto;
+    margin: 10px auto;
     width: 90%;
   }
 

@@ -196,9 +196,9 @@
                         <h2>相互事業を活かしたJAづくり</h2>
                     </div>
                     <div class="fade">
-                            <img src="/test01/img/top-imgs.jpg" alt="トップイメージ">
-                            <img src="/test01/img/top-imgs.jpg" alt="トップイメージ">
-                            <img src="/test01/img/top-imgs.jpg" alt="トップイメージ">
+                        <img src="/test01/img/top-imgs.jpg" alt="トップイメージ">
+                        <img src="/test01/img/top-imgs.jpg" alt="トップイメージ">
+                        <img src="/test01/img/top-imgs.jpg" alt="トップイメージ">
                     </div>
                     <div class="carousel">
                         <ul class="slider">
@@ -633,13 +633,12 @@
 
                 <div class="calender-right">
                     <img src="/test01/img/facebook_head.png" class="head" alt="facebook">
-                    <img src="/test01/img/facebooktimeline.png" class="sns" alt="facebook">
-
-                    <iframe
-                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fjahigashibiwako%2F&tabs=timeline&width=320&height=200&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
-                        width="320" height="200" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    <div class="fb-container">
+                        <div class="fb-page" data-href="https://www.facebook.com/jahigashibiwako/" data-width="450"
+                            data-height="240" data-tabs="timeline,events" data-hide-cover="false"
+                            data-show-facepile="true" data-small-header="true" data-adapt-container-width="true">
+                        </div>
+                    </div><!-- fb-container out -->
 
 
                     <img src="/test01/img/instagram_head.png" class="head" alt="instagram">
@@ -812,13 +811,66 @@
                 const targets = $( '.news-board' ).children();
                 targets.removeClass( 'selected' );
                 targets.eq( selectedIndex ).addClass( 'selected' );
-                targets.find('.tag').removeClass('selected');
-                targets.find('.tag').eq(selectedIndex - 1).addClass('selected')
-                console.log( targets.eq( selectedIndex ) );
-                console.log( targets.find('.tag').eq(selectedIndex - 1) );
-                console.log( selectedIndex );
+                targets.find( '.tag' ).removeClass( 'selected' );
+                targets.find( '.tag' ).eq( selectedIndex - 1 ).addClass( 'selected' )
             } )
         } )
+
+            ( function ( d, s, id ) {
+                var js, fjs = d.getElementsByTagName( s )[0];
+                if ( d.getElementById( id ) ) return;
+                js = d.createElement( s ); js.id = id;
+                js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5";
+                fjs.parentNode.insertBefore( js, fjs );
+            }( document, 'script', 'facebook-jssdk' ) );
+
+        ; jQuery( document ).ready( function ( $ ) {
+            if ( $( '.fb-page' ).length ) {
+
+                // iframeリロードの[ON/OFF]を切り替えるウィンドウサイズ。
+                var reloadWidth = 768;
+
+                $( function () {
+                    // まずウインドウの横幅を変数に入れる
+                    var timer = false;
+                    var winWidth = $( window ).width();
+                    var winWidth_resized;
+
+                    // ウインドウのリサイズイベントに処理をバインド
+                    $( window ).on( "resize", function () {
+                        // リサイズ後の放置時間が指定ミリ秒以下なら何もしない(リサイズ中に何度も処理が行われるのを防ぐ)
+                        if ( timer !== false ) {
+                            clearTimeout( timer );
+                        }
+                        // 放置時間が指定ミリ秒以上なので処理を実行
+                        timer = setTimeout( function () {
+                            // リサイズ後のウインドウの横幅を取得
+                            winWidth_resized = $( window ).width();
+
+                            // リサイズ前のウインドウ幅とリサイズ後のウインドウ幅が異なる場合
+                            if ( winWidth != winWidth_resized ) {
+
+                                var windowWidth = parseInt( $( window ).width() );
+                                if ( windowWidth >= reloadWidth ) {
+                                    // 画面サイズ大のとき
+                                    //location.reload();
+                                } else {
+                                    // 画面サイズ小のとき
+                                    location.reload();
+                                }
+                                console.log( "ウインドウ横幅のリサイズ" );
+                                console.log( "現在の横幅: ", winWidth );
+                                console.log( "リサイズ後の横幅: ", winWidth_resized );
+
+                                // 次回以降使えるようにリサイズ後の幅をウインドウ幅に設定する
+                                winWidth = $( window ).width();
+                            }
+                        }, 200 );
+                    } );
+                } );
+            }
+
+        } );
     </script>
 </body>
 
