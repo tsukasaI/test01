@@ -172,12 +172,13 @@ nav .pc-top-list > li:nth-child(n + 2):before {
   position: absolute;
   top: 100%;
   left: 0%;
-  width: 200px;
+  width: 220px;
   background-color: #ffffff;
   padding: 0;
   font-size: 14px;
   color: #00815d;
   transition: 0.3s;
+  z-index: 3;
 }
 
 .hover-menu.hovered {
@@ -189,6 +190,10 @@ nav .pc-top-list li .hover-menu li {
   border-bottom: solid #000000 1px;
   color: #00815d;
   transition: 0.3s;
+  width: 100%;
+  text-align: left;
+  padding-left: 15px;
+  font-size: 14px;
 }
 
 .hover-menu li a {
@@ -779,7 +784,7 @@ footer .footer-right .footer-external-links a {
 
 .under-layer-description .under-layer-description-link-wrapper .link-button {
   border: solid #00815d thin;
-  margin: 20px 25px;
+  margin: 10px 12px;
   width: 210px;
   height: 60px;
   display: flex;
@@ -804,9 +809,8 @@ footer .footer-right .footer-external-links a {
 }
 
 /* under-layer-content */
-
 .under-layer-content h3 {
-  margin: 80px 3%;
+  margin: 80px 3% 40px;
   border-left: #82bc9d solid 10px;
   border-bottom: #82bc9d solid 2px;
   color: #00815d;
@@ -822,6 +826,7 @@ footer .footer-right .footer-external-links a {
 
 .under-layer-content .under-layer-content-description {
   line-height: 28px;
+  margin: 0 5%;
 }
 
 .under-layer-content .under-layer-content-details {
@@ -868,7 +873,7 @@ footer .footer-right .footer-external-links a {
   .under-layer-content-details-products
   .under-layer-content-details-card {
   width: 270px;
-  margin: 10px 30px;
+  margin: 25px 30px;
   position: relative;
 }
 
@@ -1262,7 +1267,7 @@ footer .footer-right .footer-external-links a {
   /* footer */
   footer {
     display: block;
-    padding: 20px 2%;
+    padding: 20px 2% 0;
   }
 
   .footer-left .address .chara {
@@ -1272,7 +1277,12 @@ footer .footer-right .footer-external-links a {
   }
 
   footer .footer-right {
-    margin-top: 40px 0;
+    margin: 40px 0;
+    display: block;
+  }
+
+  footer .footer-right .footer-links, footer .footer-right .footer-external-links {
+    margin-top: 10px;
   }
 
   footer .footer-right .footer-external-links a {
