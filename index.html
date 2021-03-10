@@ -332,18 +332,11 @@
                 </div>
                 <img src="/test01/img/news-title-img.png" class="news-title-jp" alt="新着情報">
 
-                <!-- タグは最悪２列にして対応 -->
-                <!-- 切り替えは同じようにできているからいじりたくない -->
-
                 <div class="news-board">
-
-
                     <!-- タグとnewscontentsを同じ階層にしてz-index使えるように -->
-
-
                     <div class="news-info-and-category">
                         <div class="category">
-                            <div class="tag">
+                            <div class="tag selected">
                                 <label class="tag1" for="news-tag-all">すべて</label>
                                 <input type="radio" name="news" id="news-tag-all" value="1" checked>
                             </div>
@@ -819,7 +812,11 @@
                 const targets = $( '.news-board' ).children();
                 targets.removeClass( 'selected' );
                 targets.eq( selectedIndex ).addClass( 'selected' );
+                targets.find('.tag').removeClass('selected');
+                targets.find('.tag').eq(selectedIndex - 1).addClass('selected')
                 console.log( targets.eq( selectedIndex ) );
+                console.log( targets.find('.tag').eq(selectedIndex - 1) );
+                console.log( selectedIndex );
             } )
         } )
     </script>

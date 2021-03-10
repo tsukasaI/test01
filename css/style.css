@@ -316,7 +316,6 @@ nav .pc-top-list .hover-menu > li:hover {
   margin-right: 5%;
   margin-left: 5%;
   width: 90%;
-  margin-top: 10px;
   position: absolute;
   top: -40px;
   z-index: 1;
@@ -329,13 +328,18 @@ nav .pc-top-list .hover-menu > li:hover {
 
 .news .news-board .news-info-and-category .category {
   align-self: flex-end;
-  position: relative;
+  display: flex;
 }
 
 .news .news-board .news-info-and-category .category .tag {
   display: inline-block;
   font-weight: bold;
-  top: -50px;
+  margin: 15px 5px;
+  transition: 0.3s;
+}
+
+.news .news-board .news-info-and-category .category .tag.selected {
+  margin-top: 0;
 }
 
 .news .news-board .news-info-and-category .category .tag input {
@@ -344,7 +348,8 @@ nav .pc-top-list .hover-menu > li:hover {
 
 .news .news-board .news-info-and-category .category .tag label {
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 10px 20px 20px;
+  font-weight: normal;
 }
 
 .news .news-board .news-info-and-category .category .tag label.tag1 {
@@ -1055,6 +1060,10 @@ footer .footer-right .footer-external-links a {
     display: block;
   }
 
+  .top .top-upper-left .top-left-message h2{
+    font-size: 1rem;
+  }
+
   .top-upper .top-upper-left {
     width: 100%;
   }
@@ -1068,6 +1077,10 @@ footer .footer-right .footer-external-links a {
 
   .sp-top-row {
     display: flex;
+  }
+
+  .news .news-board {
+    margin-top: 50px;
   }
 
   .calender .calender-head .calender-head-chara {
@@ -1097,7 +1110,7 @@ footer .footer-right .footer-external-links a {
 
   .news .news-board .news-info-and-category .category .tag label {
     white-space: nowrap;
-    padding: 10px 10px 20px;
+    padding: 10px 10px 30px;
     position: relative;
     z-index: 2;
   }
