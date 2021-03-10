@@ -58,8 +58,6 @@ picture {
   display: block;
 }
 
-/* common parts and index.html */
-/* 社名非表示 */
 h1 {
   display: none;
 }
@@ -104,7 +102,6 @@ header .header-list li i {
 }
 
 /* nav */
-
 #spnav {
   display: none;
 }
@@ -385,7 +382,7 @@ nav .pc-top-list .hover-menu > li:hover {
 .news .news-board .news-contents,
 .news .news-board .news-contents-back {
   width: 90%;
-  background-image: url(../img/canvas.png);
+  background-image: url(/test01/img/canvas.png);
   background-size: cover;
   height: 800px;
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
@@ -1017,7 +1014,7 @@ footer .footer-right .footer-external-links a {
     position: fixed;
     overflow-y: scroll;
     top: 0;
-    left: 100%; /* メニューを画面の外に飛ばす */
+    left: 100%;
     z-index: 99;
     background: #fff;
     transition: 0.3s;
@@ -1057,7 +1054,7 @@ footer .footer-right .footer-external-links a {
 
   /* アイコンがクリックされたらメニューを表示 */
   #drawer-check:checked ~ .drawer-content {
-    left: 0; /* メニューを画面に入れる */
+    left: 0;
   }
 
   /* top */
@@ -1300,8 +1297,16 @@ footer .footer-right .footer-external-links a {
     font-size: 0.9rem;
   }
 
+  .underlayer-top .location {
+    margin-left: 20px;
+  }
+
   .underlayer-top-wrapper img {
     width: 70px;
+  }
+
+  .underlayer-top-title h2 {
+    margin-left: 30px;
   }
 
   /* title */
@@ -1309,8 +1314,16 @@ footer .footer-right .footer-external-links a {
     margin: 0;
   }
 
+  .under-layer-title h2 {
+    margin: auto 30px;
+  }
+
   .under-layer-content .under-layer-content-details h4 {
     padding: 5px 8%;
+  }
+
+  .under-layer-description p {
+    margin: 20px 0;
   }
 
   .under-layer-description .under-layer-description-link-wrapper {
