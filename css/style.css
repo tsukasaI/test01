@@ -422,6 +422,10 @@ nav .pc-top-list .hover-menu > li:hover {
   padding: 5px 0;
 }
 
+.news .news-board .news-contents .sp-news-contents-row {
+  display: none;
+}
+
 .news .news-board .news-contents .button-wrapper {
   text-align: right;
   padding-right: 3%;
@@ -671,10 +675,15 @@ footer .footer-right .footer-external-links a {
 
 .copyright {
   background-color: #40342f;
+}
+
+.copyright p {
   color: #ffffff;
-  padding: 20px 10%;
+  padding: 20px 100px;
   font-size: 14px;
   text-align: right;
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 /* 下層ページ */
@@ -1086,7 +1095,7 @@ footer .footer-right .footer-external-links a {
   }
 
   .news .news-board {
-    margin-top: 50px;
+    margin-top: 10px;
   }
 
   .calender .calender-head .calender-head-chara {
@@ -1094,11 +1103,12 @@ footer .footer-right .footer-external-links a {
   }
 
   .news .news-title-jp {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .news .news-board .news-info-and-category {
     z-index: 2;
+    margin-top: 30px;
   }
 
   .news .news-board .news-info-and-category .category {
@@ -1122,34 +1132,44 @@ footer .footer-right .footer-external-links a {
   }
 
   .news .news-board .news-contents {
-    position: relative;
-    z-index: 1;
+    padding-top: 100px;
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  .news .news-board .news-contents .news-contents-row {
     display: none;
   }
 
-  .news .news-board .news-contents .news-contents-row .news-card {
-    width: 200px;
-    margin: 0 5px;
-    position: relative;
+  .news .news-board .news-contents .sp-news-contents-row {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .news .news-board .news-contents .sp-news-contents-row .news-card {
+    width: 130px;
+    margin: 0 10px;
     z-index: 2;
   }
 
-  .news .news-board .news-contents .news-contents-row .news-card span {
-    font-size: 0.8rem;
+  .news .news-board .news-contents .sp-news-contents-row .news-card span {
+    color: #00815d;
+    font-size: 12px;
+    margin: 10px 0 5px;
   }
 
-  .news .news-board .news-contents .news-contents-row .news-card p {
-    font-size: 0.9rem;
+  .news .news-board .news-contents .sp-news-contents-row .news-card p {
+    font-size: 14px;
+  }
+
+  .news .news-board .news-contents .button-wrapper {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 60px;
   }
 
   .news .news-board .news-contents-back {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-3deg);
-    -webkit-transform: translate(-50%, -50%) rotate(-3deg);
-    -ms-transform: translate(-50%, -50%) rotate(-3deg);
-    z-index: 0;
+    display: none;
   }
 
   /* calender */
@@ -1278,7 +1298,8 @@ footer .footer-right .footer-external-links a {
     display: block;
   }
 
-  footer .footer-right .footer-links, footer .footer-right .footer-external-links {
+  footer .footer-right .footer-links,
+  footer .footer-right .footer-external-links {
     margin-top: 10px;
   }
 

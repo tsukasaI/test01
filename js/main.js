@@ -61,7 +61,7 @@ $( document ).ready( function ( $ ) {
         var reloadWidth = 768;
 
         $( function () {
-            // まずウインドウの横幅を変数に入れる
+            // ウインドウの横幅を変数に入れる
             var timer = false;
             var winWidth = $( window ).width();
             var winWidth_resized;
