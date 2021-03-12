@@ -543,6 +543,10 @@ nav .pc-top-list .hover-menu > li:hover {
   width: 100%;
 }
 
+.sp-fb-container {
+  display: none;
+}
+
 .calender .calender-content .calender-right .youtube-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -780,7 +784,6 @@ footer .footer-right .footer-external-links a {
   color: #00815d;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
 }
 
 .under-layer-description.under-layer-description-link-wrapper {
@@ -800,13 +803,13 @@ footer .footer-right .footer-external-links a {
 }
 
 .under-layer-description
-  .under-layer-description-link-wrapper
+  .under-layer-description-link-container .under-layer-description-link-flex-wrapper
   .link-button
   span::after {
   content: "\00a0\00a0\03e";
 }
 
-.under-layer-description .under-layer-description-link-wrapper .link-button a {
+.under-layer-description .under-layer-description-link-container .under-layer-description-link-flex-wrapper .link-button a {
   position: absolute;
   top: 0;
   left: 0;
@@ -1099,11 +1102,13 @@ footer .footer-right .footer-external-links a {
   }
 
   .calender .calender-head .calender-head-chara {
-    height: 100px;
+    height: 80px;
+    margin-left: 5%;
   }
 
   .news .news-title-jp {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    height: 25px;
   }
 
   .news .news-board .news-info-and-category {
@@ -1196,15 +1201,16 @@ footer .footer-right .footer-external-links a {
   }
 
   .calender .calender-content .calender-left .calender-left-top {
-    margin-top: 20px;
-    justify-content: center;
+    margin: 20px 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .calender .calender-content .calender-left .calender-left-top img {
     width: 50%;
     height: auto;
-    margin-right: 0;
-    margin-left: 0;
+    margin: 0;
   }
 
   .calender
@@ -1226,6 +1232,14 @@ footer .footer-right .footer-external-links a {
     height: 240px;
   }
 
+  .fb-container {
+    display: none;
+  }
+
+  .sp-fb-container {
+    display: block;
+  }
+
   .fb-page {
     display: block !important;
     width: 100%;
@@ -1237,6 +1251,12 @@ footer .footer-right .footer-external-links a {
 
   .calender .calender-content .calender-right img.instagram-img {
     margin: 0;
+  }
+
+  .calender .calender-content .calender-right .sns {
+    display: block;
+    width: 90%;
+    margin: 0 5%;
   }
 
   /* links */
@@ -1269,7 +1289,6 @@ footer .footer-right .footer-external-links a {
 
   .links .col-wrapper {
     margin: 10px auto;
-    width: 90%;
   }
 
   .links .links-wrapper .chara {
@@ -1284,11 +1303,11 @@ footer .footer-right .footer-external-links a {
   /* footer */
   footer {
     display: block;
-    padding: 20px 2% 0;
+    padding: 20px 20px 0;
   }
 
   .footer-left .address .chara {
-    width: 100px;
+    width: 75px;
     left: auto;
     right: 0%;
   }
@@ -1347,11 +1366,11 @@ footer .footer-right .footer-external-links a {
     margin: 20px 0;
   }
 
-  .under-layer-description .under-layer-description-link-wrapper {
+  .under-layer-description .under-layer-description-link-container .under-layer-description-link-flex-wrapper {
     justify-content: center;
   }
 
-  .under-layer-description .under-layer-description-link-wrapper .link-button {
+  .under-layer-description .under-layer-description-link-container .under-layer-description-link-flex-wrapper .link-button {
     margin: 10px 1%;
   }
 

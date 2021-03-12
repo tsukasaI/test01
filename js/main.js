@@ -15,7 +15,7 @@ $( function () {
 //fade
 $( document ).ready( function () {
     $( '.fade' ).slick( {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         fade: true,
@@ -23,16 +23,6 @@ $( document ).ready( function () {
         autoplay: true,
         cssEase: 'linear'
     } );
-} );
-// スライダー
-$( '.slider' ).slick( {
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    cssEase: 'linear',
-    autoplay: true,
-    autoplaySpeed: 3000,
-    dots: true,
-    arrows: false,
 } );
 
 $( function () {
@@ -72,7 +62,7 @@ $( document ).ready( function ( $ ) {
                 if ( timer !== false ) {
                     clearTimeout( timer );
                 }
-                // 放置時間が指定ミリ秒以上なので処理を実行
+                // 放置時間が指定ミリ秒以上で処理を実行
                 timer = setTimeout( function () {
                     // リサイズ後のウインドウの横幅を取得
                     winWidth_resized = $( window ).width();
