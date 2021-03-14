@@ -852,6 +852,10 @@ footer .footer-right .footer-external-links a {
   margin: 20px 0;
 }
 
+.under-layer-content-details-description p {
+  padding-top: 40px;
+}
+
 .under-layer-content-details .under-layer-content-details-top p,
 .under-layer-content-details .under-layer-content-details-top img {
   margin: 0 1%;
