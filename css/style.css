@@ -1879,10 +1879,13 @@ td {
   th {
     padding-left: 5px;
     padding-right: 5px;
+    font-size: 14px;
+    min-width: 39px;
   }
 
   td {
     padding-left: 5px;
     padding-right: 5px;
+    font-size: 14px;
   }
 }
