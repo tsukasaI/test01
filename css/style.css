@@ -1837,6 +1837,7 @@ td {
 
   .tow-images .layout-img-wrapper {
     height: auto;
+    max-width: 800px;
     margin: 20px 0;
   }
 
